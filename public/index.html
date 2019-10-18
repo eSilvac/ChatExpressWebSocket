@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Chat</title>
+
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/8fa18d9ab6.js"></script>
+
+</head>
+
+<body class="bg-dark">
+  <div class="chat card d-flex flex-column bg-white rounded">
+    <div class="chat-header border-bottom p-3 bg-light">
+      <h4 class="text-center m-0">Make It Real TOP V3 Chat</h4>
+    </div>
+
+    <div class="chat-body flex-fill d-flex flex-column-reverse">
+    </div>
+
+    <div class="chat-footer input-group border-top mt-auto p-3 bg-light">
+      <input id="message-input" type="text" class="form-control border-right-0">
+      <div class="input-group-append">
+        <span id="btn-send" class="send-btn input-group-text bg-white border-left-0"><i class="far fa-paper-plane"></i></span>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.0/handlebars.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="/socket.io/socket.io.js"></script>
+
+  <script id="message-template" type="text/x-handlebars-template">
+    <div class="comment border-top">
+      <div class="px-4 py-3">
+        <p class="mb-1">{{body}}</p>
+        <p class="text-right text-muted small mb-1">{{createdAt}}</p>
+      </div>
+    </div>
+  </script>
+
+  <script src="javascript/app.js"></script>
+</body>
+
+</html>
