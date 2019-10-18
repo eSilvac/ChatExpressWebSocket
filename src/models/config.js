@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const db = process.env.MONGO_URI || "mongodb://localhost:27017/chatSockets";
+const db = process.env.MONGODB_URI || "mongodb://localhost:27017/chatSockets";
 const options = {
   useCreateIndex: true,
   useNewUrlParser: true,
